@@ -40,9 +40,6 @@ ENV PATH $JAVA_HOME/bin:$PATH
 
 RUN echo ${JAVA_HOME}
 
-#Intall Gradle Plugin
-RUN service jenkins start && sleep 10 && cd /var/lib/jenkins/plugins && wget https://updates.jenkins-ci.org/download/plugins/gradle/1.24/gradle.hpi
-
 #Install SSH Plugin
 RUN service jenkins start && sleep 10 && cd /var/lib/jenkins/plugins && wget https://updates.jenkins-ci.org/download/plugins/ssh/2.4/ssh.hpi
 
